@@ -1,0 +1,14 @@
+---
+- name: "Install swaks"
+  yum: 
+    name: swaks
+    state: latest
+
+- name: "Place swaks ShellScripts"
+  copy:
+    src: usr/sbin/local/{{ item }}
+    dest: /usr/sbin/local/{{ item }}
+    owner: root
+    group: root
+    mode: 0755
+    with_items: "{{ swaks_script }}"

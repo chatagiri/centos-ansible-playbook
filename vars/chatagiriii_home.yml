@@ -1,0 +1,8 @@
+---
+gw_ipv4_local_address: 192.168.10.1
+self_ipv4_local_address: 192.168.10.200
+self_postfix_domain: chatagiriii.com
+featured_users: 
+  - chatagiri
+  - root
+  - chatagiriii

@@ -1,0 +1,13 @@
+---
+- name: "Install tmux"
+  yum:
+    name: tmux
+    state: latest
+
+- name: "Set my tmux config as user default"
+  copy:
+    src: "etc/tmux.conf"
+    dest: "/etc/tmux.conf"
+    owner: root
+    group: root
+    mode: 0666

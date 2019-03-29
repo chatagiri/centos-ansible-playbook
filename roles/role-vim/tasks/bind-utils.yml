@@ -1,0 +1,5 @@
+---
+- name: "Install bind-utils"
+  yum: 
+    name: bind-utils
+    state: latest

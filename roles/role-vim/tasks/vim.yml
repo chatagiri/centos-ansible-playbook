@@ -1,0 +1,30 @@
+---
+- name: "Install Vim"
+  yum:
+    name: vim
+    state: latest
+  
+- name: "Create skel directory" 
+  file:
+    path: "/etc/skel" 
+    state: directory
+    owner: root
+    group: root
+    mode: 0644
+
+- name: "Set my .vimrc config as user default"
+  copy:
+    src: "etc/skel/.vimrc"
+    dest: "/etc/skel/.vimrc"
+    owner: root
+    group: root
+    mode: 0666
+
+- name: "Place .vimrc config to already created users"
+  copy:
+    src: "etc/skel/.vimrc"
+    dest: "/home/{{ item }}/.vimrc"
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: 0644
+    with_items: "{{ featured_user }}"

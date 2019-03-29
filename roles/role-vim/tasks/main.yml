@@ -1,0 +1,20 @@
+---
+- name: "Vim tasks"
+  import_tasks: vim.yml
+  tags: vim
+
+- name: "Tmux tasks"
+  import_tasks: tmux.yml
+  tags: tmux
+
+- name: "Postfix tasks"
+  import_tasks: postfix.yml
+  tags: postfix
+
+- name: "Swaks tasks"
+  import_tasks: swaks.yml
+  tags: swaks
+
+- name: "Bind-Utils tasks"
+  import_tasks: bind-utils.yml
+  tags: bind-utils, dig

@@ -1,0 +1,6 @@
+gw_ipv4_local_address: 192.168.10.1
+featured_user:
+  - root
+
+swaks_script:
+  - send_testmail_to_example.sh
